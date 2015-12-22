@@ -2,13 +2,10 @@
   "type": "Program",
   "name": {
     "type": "Identifier",
-    "name": "empty",
-    "line": 1
+    "name": "empty"
   },
   "body": {
     "type": "Body",
-    "sentences": [],
-    "line": 2
-  },
-  "line": 1
+    "sentences": []
+  }
 }

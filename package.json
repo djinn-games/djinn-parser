@@ -4,7 +4,7 @@
   "description": "parser + translator for djinn",
   "main": "index.js",
   "scripts": {
-    "test": "mocha lib/parser/test && mocha lib/compiler/test && mocha"
+    "test": "mocha lib/parser/test && mocha lib/translator/test && mocha"
   },
   "repository": {
     "type": "git",
