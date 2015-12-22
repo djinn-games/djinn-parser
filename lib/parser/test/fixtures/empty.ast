@@ -1,0 +1,11 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "empty"
+  },
+  "body": {
+    "type": "Body",
+    "sentences": []
+  }
+}

@@ -1,0 +1,3 @@
+PROGRAM empty
+BEGIN
+END
