@@ -7,7 +7,7 @@ A "Hello, World!" program in Djinn looks like this:
 ```
 PROGRAM hello
 BEGIN
-    print("hello");
+    print("hello")
 END
 ```
 
