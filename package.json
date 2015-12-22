@@ -4,7 +4,7 @@
   "description": "parser + translator for djinn",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha lib/parser/test && mocha lib/compiler/test && mocha"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "gamedev",
-    "games"
+    "games",
+    "djinn"
   ],
   "author": "Belén \"Benko\" Albeza",
   "license": "MIT",
@@ -20,5 +21,11 @@
     "url": "https://github.com/djinn-games/djinn-parser/issues"
   },
   "homepage": "https://github.com/djinn-games/djinn-parser#readme",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "jison": "^0.4.15"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
 }
