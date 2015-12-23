@@ -13,6 +13,7 @@ https://github.com/delapuente/div2js/blob/master/src/grammar.y
 ALPHA   [a-zñç]
 DIGIT   [0-9]
 NAME    [a-zñç][0-9a-zñc_]*
+QUOTE   [\"]
 
 %%
 
@@ -23,9 +24,17 @@ NAME    [a-zñç][0-9a-zñc_]*
 
 'BEGIN'             { return 'BEGIN'; }
 'END'               { return 'END'; }
+'false'             { return 'FALSE'; }
 'PROGRAM'           { return 'PROGRAM'; }
+'true'              { return 'TRUE'; }
 
-{NAME}              { return 'NAME'; }
+'('                 { return '('; }
+')'                 { return ')'; }
+
+{NAME}                                  { return 'NAME'; }
+({QUOTE}{QUOTE})|({QUOTE}.*?{QUOTE})    { return 'STRING_LITERAL'; }
+{DIGIT}+                                { return 'INT_LITERAL'; }
+{DIGIT}+\.{DIGIT}+                      { return 'FLOAT_LITERAL'; }
 
 /lex
 
@@ -83,6 +92,62 @@ sentence_list
     : air
     {
         $$ = [];
+    }
+    | air sentence
+    {
+        $$ = [$2]
+    }
+    | air sentence EOL sentence_list
+    {
+        $4.splice(0, 0, $2); // add sentence to sentence_list array
+        $$ = $4;
+    }
+    ;
+
+sentence
+    : expression
+    {
+        $$ = {
+            type: 'ExpressionSentence',
+            expression: $1,
+            line: @1.first_line
+        }
+    }
+    ;
+
+expression
+    : postfix_expression
+    ;
+
+postfix_expression
+    : atomic_expression
+    | '(' expression ')' {
+        $$ = $2;
+    }
+    ;
+
+atomic_expression
+    : literal
+    ;
+
+literal
+    : int_literal
+    /*
+    | str_literal
+    | float_literal
+    | bool_literal
+    */
+    ;
+
+int_literal
+    : INT_LITERAL
+    {
+        $$ = {
+            type: 'Literal',
+            line: @1.first_line,
+            dataType: 'int',
+            value: parseInt($1, 10)
+        }
     }
     ;
 
