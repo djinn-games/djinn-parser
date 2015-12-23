@@ -4,7 +4,10 @@
   "description": "parser + translator for djinn",
   "main": "index.js",
   "scripts": {
-    "test": "mocha lib/parser/test && mocha lib/translator/test && mocha"
+    "test": "mocha lib/parser/test && mocha lib/translator/test && mocha",
+    "fixtures:translator": "node lib/translator/test/fixtures/raw/reset-ast.js && node lib/translator/test/fixtures/reset-out.js",
+    "fixtures:parser": "node lib/parser/test/fixtures/reset-ast.js",
+    "fixtures": "npm run fixtures:translator && npm run fixtures:parser"
   },
   "repository": {
     "type": "git",

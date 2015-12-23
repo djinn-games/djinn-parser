@@ -31,3 +31,16 @@ Run:
 ```
 npm test
 ```
+
+If you do changes to the parser and/or the translator, you will have to reset the test fixtures. You can do that by running:
+
+```
+npm run fixtures
+```
+
+You can also only reset the fixtures of a specific component:
+
+```
+npm run fixtures:parser
+npm run fixtures:translator
+```
