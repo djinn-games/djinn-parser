@@ -133,8 +133,8 @@ atomic_expression
 literal
     : int_literal
     | float_literal
-    /*
     | bool_literal
+    /*
     | str_literal
     */
     ;
@@ -162,4 +162,26 @@ float_literal
         };
     }
     ;
+
+bool_literal
+    : TRUE
+    {
+        $$ = {
+            type: 'Literal',
+            line: @1.first_line,
+            dataType: 'bool',
+            value: true
+        };
+    }
+    | FALSE
+    {
+        $$ = {
+            type: 'Literal',
+            line: @1.first_line,
+            dataType: 'bool',
+            value: false
+        };
+    }
+    ;
+
 %%
