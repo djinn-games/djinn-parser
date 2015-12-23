@@ -1,0 +1,14 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "empty",
+    "line": 5
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [],
+    "line": 8
+  },
+  "line": 5
+}

@@ -1,0 +1,100 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "expressions",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 3,
+          "dataType": "str",
+          "value": "hello"
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 4,
+          "dataType": "int",
+          "value": 0
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "right": {
+            "type": "Literal",
+            "line": 5,
+            "dataType": "int",
+            "value": 2
+          },
+          "operator": "plus",
+          "line": 5
+        },
+        "line": 5
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "right": {
+            "type": "Literal",
+            "line": 6,
+            "dataType": "int",
+            "value": 5
+          },
+          "operator": "plus",
+          "line": 6
+        },
+        "line": 6
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "right": {
+            "type": "Literal",
+            "line": 7,
+            "dataType": "float",
+            "value": 3.15
+          },
+          "operator": "minus",
+          "line": 7
+        },
+        "line": 7
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 8,
+          "dataType": "bool",
+          "value": true
+        },
+        "line": 8
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 9,
+          "dataType": "bool",
+          "value": false
+        },
+        "line": 9
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
