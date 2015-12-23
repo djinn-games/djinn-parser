@@ -37,6 +37,7 @@ QUOTE   [\"]
 '+'                 { return '+'; }
 '-'                 { return '-'; }
 
+','                 { return ','; }
 '('                 { return '('; }
 ')'                 { return ')'; }
 
@@ -132,12 +133,30 @@ expression
     : postfix_expression
     ;
 
+expression_list
+    : /* empty list */
+    {
+        $$ = []
+    }
+    | postfix_expression
+    {
+        $$ = [$1];
+    }
+    | expression_list ',' postfix_expression
+    {
+        $1.push($3);
+        $$ = $1;
+    }
+    ;
+
 postfix_expression
-    : '(' expression ')' {
+    : '(' postfix_expression ')'
+    {
         $$ = $2;
     }
     | atomic_expression
     | operation_expression
+    | call_expression
     ;
 
 atomic_expression
@@ -214,6 +233,18 @@ operation_expression
         { $$ = uopExpr('plus', $2); $$.line = @1.first_line }
     | '-' postfix_expression %prec UOP
         { $$ = uopExpr('minus', $2); $$.line = @1.first_line }
+    ;
+
+call_expression
+    : id '(' expression_list ')'
+    {
+        $$ = {
+            type: 'CallExpression',
+            callee: $1,
+            args: $3,
+            line: @1.first_line
+        };
+    }
     ;
 
 %%

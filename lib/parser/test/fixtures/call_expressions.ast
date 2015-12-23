@@ -1,0 +1,119 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "call_expressions",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "right": {
+            "type": "CallExpression",
+            "callee": {
+              "type": "Identifier",
+              "name": "zero",
+              "line": 4
+            },
+            "args": [],
+            "line": 4
+          },
+          "operator": "minus",
+          "line": 4
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "print",
+            "line": 5
+          },
+          "args": [
+            {
+              "type": "Literal",
+              "line": 5,
+              "dataType": "str",
+              "value": "waka"
+            }
+          ],
+          "line": 5
+        },
+        "line": 5
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "print",
+            "line": 6
+          },
+          "args": [
+            {
+              "type": "Literal",
+              "line": 6,
+              "dataType": "str",
+              "value": "ipsum"
+            },
+            {
+              "type": "Literal",
+              "line": 6,
+              "dataType": "str",
+              "value": "ipsum"
+            }
+          ],
+          "line": 6
+        },
+        "line": 6
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "print",
+            "line": 7
+          },
+          "args": [
+            {
+              "type": "Literal",
+              "line": 7,
+              "dataType": "int",
+              "value": 2
+            },
+            {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "zero",
+                "line": 7
+              },
+              "args": [],
+              "line": 7
+            },
+            {
+              "type": "Literal",
+              "line": 7,
+              "dataType": "str",
+              "value": "waka"
+            }
+          ],
+          "line": 7
+        },
+        "line": 7
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
