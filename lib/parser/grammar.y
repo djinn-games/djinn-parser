@@ -134,9 +134,7 @@ literal
     : int_literal
     | float_literal
     | bool_literal
-    /*
     | str_literal
-    */
     ;
 
 int_literal
@@ -180,6 +178,18 @@ bool_literal
             line: @1.first_line,
             dataType: 'bool',
             value: false
+        };
+    }
+    ;
+
+str_literal
+    : STRING_LITERAL
+    {
+        $$ = {
+            type: 'Literal',
+            line: @1.first_line,
+            dataType: 'str',
+            value: JSON.parse($1)
         };
     }
     ;
