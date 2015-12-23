@@ -4,7 +4,13 @@ https://github.com/delapuente/div2js/blob/master/src/grammar.y
 */
 
 %{
-  // js helper functions here
+function uopExpr(op, right) {
+    return {
+        type: 'OperationExpression',
+        right: right,
+        operator: op
+    };
+}
 %}
 
 %lex
@@ -28,6 +34,9 @@ QUOTE   [\"]
 'PROGRAM'           { return 'PROGRAM'; }
 'true'              { return 'TRUE'; }
 
+'+'                 { return '+'; }
+'-'                 { return '-'; }
+
 '('                 { return '('; }
 ')'                 { return ')'; }
 
@@ -37,6 +46,10 @@ QUOTE   [\"]
 {DIGIT}+                                { return 'INT_LITERAL'; }
 
 /lex
+
+// operators sorted by priority from bottom to top
+%left '+' '-'
+%left UOP // see http://dinosaur.compilertools.net/bison/bison_8.html
 
 %start program_unit
 
@@ -120,10 +133,11 @@ expression
     ;
 
 postfix_expression
-    : atomic_expression
-    | '(' expression ')' {
+    : '(' expression ')' {
         $$ = $2;
     }
+    | atomic_expression
+    | operation_expression
     ;
 
 atomic_expression
@@ -192,6 +206,14 @@ str_literal
             value: JSON.parse($1)
         };
     }
+    ;
+
+operation_expression
+    /* sign */
+    : '+' postfix_expression %prec UOP
+        { $$ = uopExpr('plus', $2); $$.line = @1.first_line }
+    | '-' postfix_expression %prec UOP
+        { $$ = uopExpr('minus', $2); $$.line = @1.first_line }
     ;
 
 %%
