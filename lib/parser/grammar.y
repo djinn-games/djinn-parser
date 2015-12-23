@@ -33,8 +33,8 @@ QUOTE   [\"]
 
 {NAME}                                  { return 'NAME'; }
 ({QUOTE}{QUOTE})|({QUOTE}.*?{QUOTE})    { return 'STRING_LITERAL'; }
-{DIGIT}+                                { return 'INT_LITERAL'; }
 {DIGIT}+\.{DIGIT}+                      { return 'FLOAT_LITERAL'; }
+{DIGIT}+                                { return 'INT_LITERAL'; }
 
 /lex
 
@@ -132,10 +132,10 @@ atomic_expression
 
 literal
     : int_literal
-    /*
-    | str_literal
     | float_literal
+    /*
     | bool_literal
+    | str_literal
     */
     ;
 
@@ -147,8 +147,19 @@ int_literal
             line: @1.first_line,
             dataType: 'int',
             value: parseInt($1, 10)
-        }
+        };
     }
     ;
 
+float_literal
+    : FLOAT_LITERAL
+    {
+        $$ = {
+            type: 'Literal',
+            line: @1.first_line,
+            dataType: 'float',
+            value: parseFloat($1)
+        };
+    }
+    ;
 %%
