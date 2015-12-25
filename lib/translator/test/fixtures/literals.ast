@@ -1,0 +1,65 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "literals",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 3,
+          "dataType": "int",
+          "value": 2
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 4,
+          "dataType": "str",
+          "value": "hello"
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 5,
+          "dataType": "float",
+          "value": 2.5
+        },
+        "line": 5
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 6,
+          "dataType": "bool",
+          "value": true
+        },
+        "line": 6
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Literal",
+          "line": 7,
+          "dataType": "bool",
+          "value": false
+        },
+        "line": 7
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

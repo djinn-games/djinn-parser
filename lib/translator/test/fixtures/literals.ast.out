@@ -1,0 +1,45 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": 2,
+        "raw": "2"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": "hello",
+        "raw": "\"hello\""
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": 2.5,
+        "raw": "2.5"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": true,
+        "raw": "true"
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": false,
+        "raw": "false"
+      }
+    }
+  ]
+}
