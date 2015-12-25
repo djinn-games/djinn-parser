@@ -1,0 +1,31 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "UnaryExpression",
+        "operator": "-",
+        "prefix": true,
+        "argument": {
+          "type": "Literal",
+          "value": 2,
+          "raw": "2"
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "UnaryExpression",
+        "operator": "+",
+        "prefix": true,
+        "argument": {
+          "type": "Literal",
+          "value": 2,
+          "raw": "2"
+        }
+      }
+    }
+  ]
+}

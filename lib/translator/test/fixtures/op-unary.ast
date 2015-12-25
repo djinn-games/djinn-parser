@@ -1,0 +1,45 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "unary_operators",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "right": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 2
+          },
+          "operator": "minus",
+          "line": 3
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "right": {
+            "type": "Literal",
+            "line": 4,
+            "dataType": "int",
+            "value": 2
+          },
+          "operator": "plus",
+          "line": 4
+        },
+        "line": 4
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
