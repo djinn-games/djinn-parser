@@ -1,0 +1,42 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "wrong_arg_amount",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "log",
+            "line": 3
+          },
+          "args": [
+            {
+              "type": "Literal",
+              "line": 3,
+              "dataType": "str",
+              "value": "waka"
+            },
+            {
+              "type": "Literal",
+              "line": 3,
+              "dataType": "str",
+              "value": "waka"
+            }
+          ],
+          "line": 3
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

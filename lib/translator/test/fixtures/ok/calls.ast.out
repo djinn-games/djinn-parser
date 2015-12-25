@@ -6,8 +6,15 @@
       "expression": {
         "type": "CallExpression",
         "callee": {
-          "type": "Identifier",
-          "name": "log"
+            "type": "MemberExpression",
+            "object": {
+                "type": "Identifier",
+                "name": "DJINN"
+            },
+            "property": {
+                "type": "Identifier",
+                "name": "log"
+            }
         },
         "arguments": [
           {

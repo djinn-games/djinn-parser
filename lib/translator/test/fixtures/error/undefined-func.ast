@@ -1,0 +1,29 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "undefined_func",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "waka",
+            "line": 3
+          },
+          "args": [],
+          "line": 3
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
