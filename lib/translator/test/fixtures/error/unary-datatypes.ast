@@ -1,0 +1,30 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "error_unary_datatypes",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "right": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "str",
+            "value": "hello"
+          },
+          "operator": "minus",
+          "line": 3
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
