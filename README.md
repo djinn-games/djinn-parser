@@ -24,7 +24,15 @@ END
 EOF
 ```
 
-## Testing
+## Development
+
+### Gulp tasks
+
+`djinn-parser` uses [Gulp](http://www.gulpjs.com) to automatize some tasks.
+
+### Testing
+
+#### Via NPM
 
 Run:
 
@@ -43,4 +51,10 @@ You can also only reset the fixtures of a specific component:
 ```
 npm run fixtures:parser
 npm run fixtures:translator
+```
+
+#### Via gulp
+
+```
+gulp test
 ```

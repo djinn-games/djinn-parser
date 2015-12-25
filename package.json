@@ -3,11 +3,17 @@
   "version": "0.0.1",
   "description": "parser + translator for djinn",
   "main": "index.js",
+  "browser": "dist/djinn-parser.js",
   "scripts": {
     "test": "mocha lib/parser/test && mocha lib/translator/test && mocha",
     "fixtures:translator": "node lib/translator/test/fixtures/raw/reset-ast.js && node lib/translator/test/fixtures/reset-out.js",
     "fixtures:parser": "node lib/parser/test/fixtures/reset-ast.js",
-    "fixtures": "npm run fixtures:translator && npm run fixtures:parser"
+    "fixtures": "npm run fixtures:translator && npm run fixtures:parser",
+    "clean": "rimraf -rf dist",
+    "build": "jison -m commonjs lib/parser/grammar.y -o lib/parser/grammar.js",
+    "dist:makedir": "mkdirp dist",
+    "dist:bundle": " browserify browser.js --standalone DjinnParser -p browserify-derequire -d -o dist/djinn-parser.js",
+    "dist": "npm run build && npm run dist:makedir && npm run dist:bundle"
   },
   "repository": {
     "type": "git",
@@ -29,6 +35,9 @@
     "jison": "^0.4.15"
   },
   "devDependencies": {
-    "mocha": "^2.3.4"
+    "browserify": "^12.0.1",
+    "browserify-derequire": "^0.9.4",
+    "mocha": "^2.3.4",
+    "rimraf": "^2.5.0"
   }
 }
