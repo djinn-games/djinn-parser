@@ -52,7 +52,7 @@
               "dataType": "float",
               "value": 5
             },
-            "operator": "sub",
+            "operator": "mul",
             "line": 4
           },
           "right": {
@@ -86,6 +86,48 @@
           "line": 5
         },
         "line": 5
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 6,
+            "dataType": "int",
+            "value": 3
+          },
+          "right": {
+            "type": "Literal",
+            "line": 6,
+            "dataType": "int",
+            "value": 5
+          },
+          "operator": "div",
+          "line": 6
+        },
+        "line": 6
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 7,
+            "dataType": "int",
+            "value": 4
+          },
+          "right": {
+            "type": "Literal",
+            "line": 7,
+            "dataType": "int",
+            "value": 2
+          },
+          "operator": "mod",
+          "line": 7
+        },
+        "line": 7
       }
     ],
     "line": 2
