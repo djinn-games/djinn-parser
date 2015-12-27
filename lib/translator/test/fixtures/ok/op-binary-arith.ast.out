@@ -1,0 +1,70 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "BinaryExpression",
+        "operator": "+",
+        "left": {
+          "type": "Literal",
+          "value": 2,
+          "raw": "2"
+        },
+        "right": {
+          "type": "Literal",
+          "value": 2,
+          "raw": "2"
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "BinaryExpression",
+        "operator": "-",
+        "left": {
+          "type": "BinaryExpression",
+          "operator": "-",
+          "left": {
+            "type": "UnaryExpression",
+            "operator": "-",
+            "prefix": true,
+            "argument": {
+              "type": "Literal",
+              "value": 2,
+              "raw": "2"
+            }
+          },
+          "right": {
+            "type": "Literal",
+            "value": 5,
+            "raw": "5"
+          }
+        },
+        "right": {
+          "type": "Literal",
+          "value": 3,
+          "raw": "3"
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "BinaryExpression",
+        "operator": "+",
+        "left": {
+          "type": "Literal",
+          "value": false,
+          "raw": "false"
+        },
+        "right": {
+          "type": "Literal",
+          "value": "",
+          "raw": "\"\""
+        }
+      }
+    }
+  ]
+}

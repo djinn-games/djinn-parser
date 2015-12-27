@@ -1,0 +1,94 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "arith",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 2
+          },
+          "right": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 2
+          },
+          "operator": "add",
+          "line": 3
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "OperationExpression",
+            "left": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "int",
+              "value": 2
+            },
+            "right": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "int",
+              "value": 3
+            },
+            "operator": "sub",
+            "line": 4
+          },
+          "right": {
+            "type": "OperationExpression",
+            "right": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "int",
+              "value": 2
+            },
+            "operator": "minus",
+            "line": 4
+          },
+          "operator": "add",
+          "line": 4
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 5,
+            "dataType": "bool",
+            "value": false
+          },
+          "right": {
+            "type": "Literal",
+            "line": 5,
+            "dataType": "str",
+            "value": "waka"
+          },
+          "operator": "add",
+          "line": 5
+        },
+        "line": 5
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

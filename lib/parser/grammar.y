@@ -11,6 +11,15 @@ function uopExpr(op, right) {
         operator: op
     };
 }
+
+function bopExpr(op, left, right) {
+    return {
+        type: 'OperationExpression',
+        left: left,
+        right: right,
+        operator: op
+    };
+}
 %}
 
 %lex
@@ -36,6 +45,10 @@ QUOTE   [\"]
 
 '+'                 { return '+'; }
 '-'                 { return '-'; }
+'*'                 { return '*'; }
+'/'                 { return '/'; }
+'%'                 { return '%'; }
+'MOD'               { return '%'; }
 
 ','                 { return ','; }
 '('                 { return '('; }
@@ -50,6 +63,7 @@ QUOTE   [\"]
 
 // operators sorted by priority from bottom to top
 %left '+' '-'
+%left '*' '/' '%'
 %left UOP // see http://dinosaur.compilertools.net/bison/bison_8.html
 
 %start program_unit
@@ -230,9 +244,14 @@ str_literal
 operation_expression
     /* sign */
     : '+' postfix_expression %prec UOP
-        { $$ = uopExpr('plus', $2); $$.line = @1.first_line }
+        { $$ = uopExpr('plus', $2); $$.line = @1.first_line; }
     | '-' postfix_expression %prec UOP
-        { $$ = uopExpr('minus', $2); $$.line = @1.first_line }
+        { $$ = uopExpr('minus', $2); $$.line = @1.first_line; }
+    /* arith */
+    | postfix_expression '+' postfix_expression
+        { $$ = bopExpr('add', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '-' postfix_expression
+        { $$ = bopExpr('sub', $1, $3); $$.line = @1.first_line; }
     ;
 
 call_expression
