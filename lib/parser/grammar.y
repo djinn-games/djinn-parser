@@ -252,6 +252,12 @@ operation_expression
         { $$ = bopExpr('add', $1, $3); $$.line = @1.first_line; }
     | postfix_expression '-' postfix_expression
         { $$ = bopExpr('sub', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '*' postfix_expression
+        { $$ = bopExpr('mul', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '/' postfix_expression
+        { $$ = bopExpr('div', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '%' postfix_expression
+        { $$ = bopExpr('mod', $1, $3); $$.line = @1.first_line; }
     ;
 
 call_expression
