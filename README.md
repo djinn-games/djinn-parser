@@ -50,6 +50,26 @@ cat hello.prg | node lib/parser/index.js | node lib/translator/index.js
 
 ## Development
 
+### Build and distribution
+
+#### Build to be consumed by Node
+
+```
+npm run build
+```
+
+This will compile the grammar with Jison and generate `lib/parser/grammar.js`. Note that if you modify the grammar, you will need to re-build this file.
+
+If `lib/parser/grammar.js` file is not present, the parser will compile the grammar on the fly.
+
+### Build to be consumed by [Browserify](http://browserify.org/):
+
+```
+npm run dist
+```
+
+This will regenerate `dist/djinn-parse.rjs`.
+
 ### Testing
 
 Run:
