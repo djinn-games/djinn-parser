@@ -2,5 +2,12 @@
     "esnext": true,
     "node": true,
     "-W014": false,
-    "devel": true
+    "devel": true,
+    "predef": [
+        "describe",
+        "it",
+        "beforeEach",
+        "afterEach",
+        "expect"
+    ]
 }
