@@ -1,5 +1,6 @@
 {
     "esnext": true,
     "node": true,
-    "-W014": false
+    "-W014": false,
+    "devel": true
 }

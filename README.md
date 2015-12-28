@@ -2,6 +2,8 @@
 
 Compiler for [Djinn](https://github.com/djinn-games).
 
+If you want to follow Djinn's development, you can see our [Trello board](https://trello.com/b/N1yrkE68).
+
 ## Usage
 
 This Node module is meant to be consumed by a Djinn VM, such as [djinn-player](https://github.com/djinn-games/djinn-player).
