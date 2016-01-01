@@ -39,6 +39,40 @@ BEGIN
 END
 ```
 
+### Data types
+
+Simple data types:
+
+- `int`: integer numbers
+- `float`: floating point numbers
+- `str`: text strings
+- `bool`: booleans (`true` or `false`)
+
+### Operators
+
+Djinn features the following operators. The lower the precedence in the chart, the more precedence that operator has. Precedence can be modified by the use of parentheses.
+
+```
+2 + 3 * 4   # -> 14
+(2 + 3) * 4 # -> 20
+```
+
+Precedence | Operator | Description | Input type/s | Returns type | Associativity
+--|--|--|--|--|--
+1 | `!` | Unary not | `bool` | `bool` | Left-to-right
+1 | `+`, `-` | Unary plus/minus sign | `int`, `float` | `int`, `float` | Left-to-right
+2 | `*`, `/`| Multiplication and division | `int`, `float` | `int`, `float` | Left-to-right
+2 | `%`/`MOD` | Modulus | `int` | `int` | Left-to-right
+3 | `+`, `-` | Addition and subtraction | `int`, `float` | `int`, `float` | Left-to-right
+3 | `+` | String concatenation | `str` and any | `str` | Left-to-right
+4 | `<`, `>` | Relational lower and greater | `int`, `float` | `bool` | Left-to-right
+4 | `<=`, `>=` | Relational lower/greater or equal | `int`, `float` | `bool` | Left-to-right
+4 | `==`, `!=` | Relational equality or inequality | `int`, `float` | `bool` | Left-to-right
+5 | `&&`/`AND`, <code>&#124;&#124;</code>/`OR` | Logical AND and OR | `bool` | `bool` | Left-to-right
+
+
+<!--
+
 ### Variables
 
 Djinn is a **static** languages. Variables and constants are **typed** and must be declared before their use.
@@ -61,12 +95,6 @@ STR some_string = "waka waka"
 CONST FLOAT PI = 3.141592
 ```
 
-#### Simple types
-
-- `int`: integer numbers
-- `float`: floating point numbers
-- `str`: text strings
-
 ### Scope
 
-TODO
+TODO -->
