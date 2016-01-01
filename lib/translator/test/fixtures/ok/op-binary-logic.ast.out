@@ -1,0 +1,92 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "LogicalExpression",
+        "left": {
+          "type": "Literal",
+          "value": true,
+          "raw": "true"
+        },
+        "operator": "&&",
+        "right": {
+          "type": "Literal",
+          "value": false,
+          "raw": "false"
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "LogicalExpression",
+        "left": {
+          "type": "Literal",
+          "value": false,
+          "raw": "false"
+        },
+        "operator": "||",
+        "right": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Literal",
+            "value": 5,
+            "raw": "5"
+          },
+          "operator": "<",
+          "right": {
+            "type": "Literal",
+            "value": 10,
+            "raw": "10"
+          }
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "LogicalExpression",
+        "left": {
+          "type": "Literal",
+          "value": true,
+          "raw": "true"
+        },
+        "operator": "&&",
+        "right": {
+          "type": "UnaryExpression",
+          "operator": "!",
+          "prefix": true,
+          "argument": {
+            "type": "Literal",
+            "value": true,
+            "raw": "true"
+          }
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "LogicalExpression",
+        "left": {
+          "type": "Literal",
+          "value": true,
+          "raw": "true"
+        },
+        "operator": "||",
+        "right": {
+          "type": "UnaryExpression",
+          "operator": "!",
+          "prefix": true,
+          "argument": {
+            "type": "Literal",
+            "value": true,
+            "raw": "true"
+          }
+        }
+      }
+    }
+  ]
+}
