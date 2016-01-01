@@ -56,6 +56,12 @@ QUOTE   [\"]
 '!='                { return '!='; }
 '<'                 { return '<'; }
 '>'                 { return '>'; }
+'AND'               { return '&&'; }
+'&&'                { return '&&'; }
+'OR'                { return '||'; }
+'||'                { return '||'; }
+'NOT'               { return '!'; }
+'!'                 { return '!'; }
 
 ','                 { return ','; }
 '('                 { return '('; }
@@ -69,10 +75,11 @@ QUOTE   [\"]
 /lex
 
 // operators sorted by priority from bottom to top
+%left '&&' '||'
 %left '>' '<' '>=' '<=' '==' '!='
 %left '+' '-'
 %left '*' '/' '%'
-%left UOP // see http://dinosaur.compilertools.net/bison/bison_8.html
+%left '!' UOP // see http://dinosaur.compilertools.net/bison/bison_8.html
 
 %start program_unit
 
@@ -279,6 +286,13 @@ operation_expression
         { $$ = bopExpr('eq', $1, $3); $$.line = @1.first_line; }
     | postfix_expression '!=' postfix_expression
         { $$ = bopExpr('neq', $1, $3); $$.line = @1.first_line; }
+    /* logical */
+    | postfix_expression '||' postfix_expression
+        { $$ = bopExpr('or', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '&&' postfix_expression
+        { $$ = bopExpr('and', $1, $3); $$.line = @1.first_line; }
+    | '!' postfix_expression
+        { $$ = uopExpr('not', $2); $$.line = @1.first_line; }
     ;
 
 call_expression
