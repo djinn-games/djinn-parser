@@ -13,7 +13,7 @@
     "clean:build": "rimraf lib/parser/grammar.js",
     "build": "jison -m commonjs lib/parser/grammar.y -o lib/parser/grammar.js",
     "dist:makedir": "mkdirp dist",
-    "dist:bundle": " browserify browser.js --standalone DjinnParser -p browserify-derequire -o dist/djinn-parser.js",
+    "dist:bundle": "browserify browser.js --debug --standalone DjinnParser -p browserify-derequire | exorcist dist/djinn-parser.js.map > dist/djinn-parser.js",
     "dist": "npm run build && npm run dist:makedir && npm run dist:bundle && npm run clean:build"
   },
   "repository": {
@@ -40,6 +40,7 @@
     "browserify": "^12.0.1",
     "browserify-derequire": "^0.9.4",
     "chai": "^3.4.1",
+    "exorcist": "^0.4.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.4",
     "rewire": "^2.5.1",
