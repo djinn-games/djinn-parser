@@ -50,6 +50,13 @@ QUOTE   [\"]
 '%'                 { return '%'; }
 'MOD'               { return '%'; }
 
+'<='                { return '<='; }
+'>='                { return '>='; }
+'=='                { return '=='; }
+'!='                { return '!='; }
+'<'                 { return '<'; }
+'>'                 { return '>'; }
+
 ','                 { return ','; }
 '('                 { return '('; }
 ')'                 { return ')'; }
@@ -62,6 +69,7 @@ QUOTE   [\"]
 /lex
 
 // operators sorted by priority from bottom to top
+%left '>' '<' '>=' '<=' '==' '!='
 %left '+' '-'
 %left '*' '/' '%'
 %left UOP // see http://dinosaur.compilertools.net/bison/bison_8.html
@@ -258,6 +266,19 @@ operation_expression
         { $$ = bopExpr('div', $1, $3); $$.line = @1.first_line; }
     | postfix_expression '%' postfix_expression
         { $$ = bopExpr('mod', $1, $3); $$.line = @1.first_line; }
+    /* comparison */
+    | postfix_expression '>' postfix_expression
+        { $$ = bopExpr('gt', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '<' postfix_expression
+        { $$ = bopExpr('lt', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '>=' postfix_expression
+        { $$ = bopExpr('gte', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '<=' postfix_expression
+        { $$ = bopExpr('lte', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '==' postfix_expression
+        { $$ = bopExpr('eq', $1, $3); $$.line = @1.first_line; }
+    | postfix_expression '!=' postfix_expression
+        { $$ = bopExpr('neq', $1, $3); $$.line = @1.first_line; }
     ;
 
 call_expression

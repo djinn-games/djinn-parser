@@ -1,0 +1,163 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "comparison",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "OperationExpression",
+            "left": {
+              "type": "Literal",
+              "line": 3,
+              "dataType": "int",
+              "value": 2
+            },
+            "right": {
+              "type": "Literal",
+              "line": 3,
+              "dataType": "int",
+              "value": 4
+            },
+            "operator": "add",
+            "line": 3
+          },
+          "right": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 5
+          },
+          "operator": "gt",
+          "line": 3
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 4,
+            "dataType": "int",
+            "value": 2
+          },
+          "right": {
+            "type": "Literal",
+            "line": 4,
+            "dataType": "int",
+            "value": 3
+          },
+          "operator": "lt",
+          "line": 4
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 5,
+            "dataType": "int",
+            "value": 2
+          },
+          "right": {
+            "type": "OperationExpression",
+            "left": {
+              "type": "Literal",
+              "line": 5,
+              "dataType": "int",
+              "value": 2
+            },
+            "right": {
+              "type": "Literal",
+              "line": 5,
+              "dataType": "int",
+              "value": 1
+            },
+            "operator": "add",
+            "line": 5
+          },
+          "operator": "eq",
+          "line": 5
+        },
+        "line": 5
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 6,
+            "dataType": "int",
+            "value": 2
+          },
+          "right": {
+            "type": "Literal",
+            "line": 6,
+            "dataType": "int",
+            "value": 3
+          },
+          "operator": "gte",
+          "line": 6
+        },
+        "line": 6
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 7,
+            "dataType": "int",
+            "value": 2
+          },
+          "right": {
+            "type": "Literal",
+            "line": 7,
+            "dataType": "int",
+            "value": 2
+          },
+          "operator": "neq",
+          "line": 7
+        },
+        "line": 7
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "OperationExpression",
+          "left": {
+            "type": "Literal",
+            "line": 8,
+            "dataType": "int",
+            "value": 3
+          },
+          "right": {
+            "type": "Literal",
+            "line": 8,
+            "dataType": "int",
+            "value": 5
+          },
+          "operator": "lte",
+          "line": 8
+        },
+        "line": 8
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
