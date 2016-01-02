@@ -1,0 +1,73 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "var_declarations",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "float",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 3
+          },
+          "init": {
+            "type": "OperationExpression",
+            "left": {
+              "type": "Literal",
+              "line": 3,
+              "dataType": "int",
+              "value": 0
+            },
+            "right": {
+              "type": "Literal",
+              "line": 3,
+              "dataType": "float",
+              "value": 1
+            },
+            "operator": "add",
+            "line": 3
+          }
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 4
+          },
+          "init": {
+            "type": "VarDeclaration",
+            "dataType": "int",
+            "id": {
+              "type": "Identifier",
+              "name": "y",
+              "line": 4
+            },
+            "init": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "int",
+              "value": 0
+            }
+          }
+        },
+        "line": 4
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

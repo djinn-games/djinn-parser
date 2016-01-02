@@ -38,9 +38,13 @@ QUOTE   [\"]
 <<EOF>>             { return 'EOF'; }
 
 'BEGIN'             { return 'BEGIN'; }
+'bool'              { return 'BOOL'; }
 'END'               { return 'END'; }
 'false'             { return 'FALSE'; }
+'float'             { return 'FLOAT'; }
+'int'               { return 'INT'; }
 'PROGRAM'           { return 'PROGRAM'; }
+'str'               { return 'STRING'; }
 'true'              { return 'TRUE'; }
 
 '+'                 { return '+'; }
@@ -62,6 +66,7 @@ QUOTE   [\"]
 '||'                { return '||'; }
 'NOT'               { return '!'; }
 '!'                 { return '!'; }
+'='                 { return '='; }
 
 ','                 { return ','; }
 '('                 { return '('; }
@@ -75,6 +80,7 @@ QUOTE   [\"]
 /lex
 
 // operators sorted by priority from bottom to top
+%right '='
 %left '&&' '||'
 %left '>' '<' '>=' '<=' '==' '!='
 %left '+' '-'
@@ -186,6 +192,7 @@ postfix_expression
     | atomic_expression
     | operation_expression
     | call_expression
+    | var_const_declaration
     ;
 
 atomic_expression
@@ -305,6 +312,30 @@ call_expression
             line: @1.first_line
         };
     }
+    ;
+
+var_const_declaration
+    : var_declaration
+    ;
+
+var_declaration
+    : datatype id '=' postfix_expression
+    {
+        $$ = {
+            type: 'VarDeclaration',
+            dataType: $1,
+            id: $2,
+            init: $4
+        };
+    }
+    | datatype id
+    ;
+
+datatype
+    : INT { $$ = 'int'; }
+    | STRING { $$ = 'str'; }
+    | FLOAT { $$ = 'float'; }
+    | BOOL { $$ = 'bool'; }
     ;
 
 %%
