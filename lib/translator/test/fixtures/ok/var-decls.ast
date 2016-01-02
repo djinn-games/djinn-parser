@@ -1,0 +1,81 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "var_declarations",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 3
+          },
+          "init": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 0
+          }
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "float",
+          "id": {
+            "type": "Identifier",
+            "name": "y",
+            "line": 4
+          },
+          "init": {
+            "type": "VarDeclaration",
+            "dataType": "float",
+            "id": {
+              "type": "Identifier",
+              "name": "z",
+              "line": 4
+            },
+            "init": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "float",
+              "value": 3.5
+            }
+          }
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "bool",
+          "id": {
+            "type": "Identifier",
+            "name": "flag",
+            "line": 5
+          },
+          "init": {
+            "type": "Literal",
+            "line": 5,
+            "dataType": "bool",
+            "value": false
+          }
+        },
+        "line": 5
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
