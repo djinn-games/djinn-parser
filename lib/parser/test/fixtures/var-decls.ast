@@ -65,6 +65,19 @@
           }
         },
         "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "str",
+          "id": {
+            "type": "Identifier",
+            "name": "txt",
+            "line": 5
+          }
+        },
+        "line": 5
       }
     ],
     "line": 2

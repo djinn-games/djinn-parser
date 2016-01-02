@@ -329,6 +329,13 @@ var_declaration
         };
     }
     | datatype id
+    {
+        $$ = {
+            type: 'VarDeclaration',
+            dataType: $1,
+            id: $2
+        };
+    }
     ;
 
 datatype
