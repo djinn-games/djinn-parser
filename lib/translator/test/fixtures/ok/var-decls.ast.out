@@ -4,56 +4,64 @@
     {
       "type": "ExpressionStatement",
       "expression": {
-        "type": "CallExpression",
-        "callee": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
           "type": "MemberExpression",
           "object": {
-            "type": "Identifier",
-            "name": "DJINN"
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
           },
           "property": {
-            "type": "Identifier",
-            "name": "__setVar"
+            "type": "Literal",
+            "value": "_x",
+            "raw": "\"_x\""
           }
         },
-        "arguments": [
-          {
-            "type": "Literal",
-            "value": "x",
-            "raw": "\"x\""
-          },
-          {
-            "type": "Literal",
-            "value": 0,
-            "raw": "0"
-          }
-        ]
+        "right": {
+          "type": "Literal",
+          "value": 0,
+          "raw": "0"
+        }
       }
     },
     {
       "type": "ExpressionStatement",
       "expression": {
-        "type": "CallExpression",
-        "callee": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
           "type": "MemberExpression",
           "object": {
-            "type": "Identifier",
-            "name": "DJINN"
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
           },
           "property": {
-            "type": "Identifier",
-            "name": "__setVar"
+            "type": "Literal",
+            "value": "_y",
+            "raw": "\"_y\""
           }
         },
-        "arguments": [
-          {
-            "type": "Literal",
-            "value": "y",
-            "raw": "\"y\""
-          },
-          {
-            "type": "CallExpression",
-            "callee": {
+        "right": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
               "type": "MemberExpression",
               "object": {
                 "type": "Identifier",
@@ -61,52 +69,52 @@
               },
               "property": {
                 "type": "Identifier",
-                "name": "__setVar"
+                "name": "__scope"
               }
             },
-            "arguments": [
-              {
-                "type": "Literal",
-                "value": "z",
-                "raw": "\"z\""
-              },
-              {
-                "type": "Literal",
-                "value": 3.5,
-                "raw": "3.5"
-              }
-            ]
+            "property": {
+              "type": "Literal",
+              "value": "_z",
+              "raw": "\"_z\""
+            }
+          },
+          "right": {
+            "type": "Literal",
+            "value": 3.5,
+            "raw": "3.5"
           }
-        ]
+        }
       }
     },
     {
       "type": "ExpressionStatement",
       "expression": {
-        "type": "CallExpression",
-        "callee": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
           "type": "MemberExpression",
           "object": {
-            "type": "Identifier",
-            "name": "DJINN"
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
           },
           "property": {
-            "type": "Identifier",
-            "name": "__setVar"
+            "type": "Literal",
+            "value": "_flag",
+            "raw": "\"_flag\""
           }
         },
-        "arguments": [
-          {
-            "type": "Literal",
-            "value": "flag",
-            "raw": "\"flag\""
-          },
-          {
-            "type": "Literal",
-            "value": false,
-            "raw": "false"
-          }
-        ]
+        "right": {
+          "type": "Literal",
+          "value": false,
+          "raw": "false"
+        }
       }
     }
   ]
