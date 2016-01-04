@@ -23,7 +23,8 @@
             "type": "Literal",
             "value": "_x",
             "raw": "\"_x\""
-          }
+          },
+          "computed": true
         },
         "right": {
           "type": "Literal",
@@ -54,7 +55,8 @@
             "type": "Literal",
             "value": "_y",
             "raw": "\"_y\""
-          }
+          },
+          "computed": true
         },
         "right": {
           "type": "AssignmentExpression",
@@ -76,7 +78,8 @@
               "type": "Literal",
               "value": "_z",
               "raw": "\"_z\""
-            }
+            },
+            "computed": true
           },
           "right": {
             "type": "Literal",
@@ -108,7 +111,8 @@
             "type": "Literal",
             "value": "_flag",
             "raw": "\"_flag\""
-          }
+          },
+          "computed": true
         },
         "right": {
           "type": "Literal",
