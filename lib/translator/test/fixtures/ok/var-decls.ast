@@ -17,12 +17,6 @@
             "type": "Identifier",
             "name": "x",
             "line": 3
-          },
-          "init": {
-            "type": "Literal",
-            "line": 3,
-            "dataType": "int",
-            "value": 0
           }
         },
         "line": 3
@@ -73,6 +67,19 @@
           }
         },
         "line": 5
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "str",
+          "id": {
+            "type": "Identifier",
+            "name": "txt",
+            "line": 6
+          }
+        },
+        "line": 6
       }
     ],
     "line": 2
