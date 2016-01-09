@@ -1,0 +1,95 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "const_declarations",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 3
+          },
+          "init": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 2
+          },
+          "line": 3
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "str",
+          "id": {
+            "type": "Identifier",
+            "name": "msg",
+            "line": 4
+          },
+          "init": {
+            "type": "Literal",
+            "line": 4,
+            "dataType": "str",
+            "value": "waka waka"
+          },
+          "line": 4
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "bool",
+          "id": {
+            "type": "Identifier",
+            "name": "flag",
+            "line": 5
+          },
+          "init": {
+            "type": "Literal",
+            "line": 5,
+            "dataType": "bool",
+            "value": true
+          },
+          "line": 5
+        },
+        "line": 5
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "float",
+          "id": {
+            "type": "Identifier",
+            "name": "PHI",
+            "line": 6
+          },
+          "init": {
+            "type": "Literal",
+            "line": 6,
+            "dataType": "float",
+            "value": 1.61803
+          },
+          "line": 6
+        },
+        "line": 6
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
