@@ -39,6 +39,7 @@ QUOTE   [\"]
 
 'BEGIN'             { return 'BEGIN'; }
 'bool'              { return 'BOOL'; }
+'CONST'             { return 'CONST'; }
 'END'               { return 'END'; }
 'false'             { return 'FALSE'; }
 'float'             { return 'FLOAT'; }
@@ -318,6 +319,7 @@ call_expression
 
 var_const_declaration
     : var_declaration
+    | const_declaration
     ;
 
 var_declaration
@@ -337,6 +339,19 @@ var_declaration
             type: 'VarDeclaration',
             dataType: $1,
             id: $2,
+            line: @1.first_line
+        };
+    }
+    ;
+
+const_declaration
+    : CONST datatype id '=' postfix_expression
+    {
+        $$ = {
+            type: 'ConstDeclaration',
+            dataType: $2,
+            id: $3,
+            init: $5,
             line: @1.first_line
         };
     }
