@@ -24,8 +24,19 @@
       {
         "type": "ExpressionSentence",
         "expression": {
-          "type": "Identifier",
-          "name": "x",
+          "type": "OperationExpression",
+          "left": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 4
+          },
+          "right": {
+            "type": "Literal",
+            "line": 4,
+            "dataType": "int",
+            "value": 5
+          },
+          "operator": "add",
           "line": 4
         },
         "line": 4

@@ -36,24 +36,33 @@
     {
       "type": "ExpressionStatement",
       "expression": {
-        "type": "MemberExpression",
-        "object": {
+        "type": "BinaryExpression",
+        "left": {
           "type": "MemberExpression",
           "object": {
-            "type": "Identifier",
-            "name": "DJINN"
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
           },
           "property": {
-            "type": "Identifier",
-            "name": "__scope"
-          }
+            "type": "Literal",
+            "value": "_x",
+            "raw": "\"_x\""
+          },
+          "computed": true
         },
-        "property": {
+        "operator": "+",
+        "right": {
           "type": "Literal",
-          "value": "_x",
-          "raw": "\"_x\""
-        },
-        "computed": true
+          "value": 5,
+          "raw": "5"
+        }
       }
     }
   ]

@@ -1,5 +1,5 @@
 PROGRAM var_expressions
 BEGIN
     INT x
-    x
+    x + 5
 END
