@@ -1,0 +1,60 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_x",
+            "raw": "\"_x\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "Literal",
+          "value": 0,
+          "raw": "0"
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "MemberExpression",
+        "object": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "Identifier",
+            "name": "DJINN"
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "__scope"
+          }
+        },
+        "property": {
+          "type": "Literal",
+          "value": "_x",
+          "raw": "\"_x\""
+        },
+        "computed": true
+      }
+    }
+  ]
+}
