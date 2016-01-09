@@ -193,6 +193,7 @@ postfix_expression
     | operation_expression
     | call_expression
     | var_const_declaration
+    | assignment_expression
     ;
 
 atomic_expression
@@ -346,6 +347,19 @@ datatype
     | STRING { $$ = 'str'; }
     | FLOAT { $$ = 'float'; }
     | BOOL { $$ = 'bool'; }
+    ;
+
+assignment_expression
+    : id '=' postfix_expression
+    {
+        $$ = {
+            type: 'AssignmentExpression',
+            operator: $2,
+            left: $1,
+            right: $3,
+            line: @1.first_line
+        }
+    }
     ;
 
 %%
