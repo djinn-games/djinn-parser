@@ -196,7 +196,8 @@ postfix_expression
     ;
 
 atomic_expression
-    : literal
+    : id
+    | literal
     ;
 
 literal

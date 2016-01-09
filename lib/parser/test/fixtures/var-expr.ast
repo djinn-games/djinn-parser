@@ -1,0 +1,24 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "var_expressions",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "Identifier",
+          "name": "x",
+          "line": 3
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
