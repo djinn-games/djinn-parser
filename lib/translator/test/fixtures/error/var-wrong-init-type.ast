@@ -2,7 +2,7 @@
   "type": "Program",
   "name": {
     "type": "Identifier",
-    "name": "var_with_function_name",
+    "name": "wrong_var_initialization_data_type",
     "line": 1
   },
   "body": {
@@ -15,8 +15,14 @@
           "dataType": "int",
           "id": {
             "type": "Identifier",
-            "name": "log",
+            "name": "x",
             "line": 3
+          },
+          "init": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "str",
+            "value": "waka"
           },
           "line": 3
         },

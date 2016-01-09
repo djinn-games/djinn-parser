@@ -17,7 +17,8 @@
             "type": "Identifier",
             "name": "x",
             "line": 3
-          }
+          },
+          "line": 3
         },
         "line": 3
       },
