@@ -1,0 +1,126 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_x",
+            "raw": "\"_x\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "BinaryExpression",
+          "left": {
+            "type": "Literal",
+            "value": 5,
+            "raw": "5"
+          },
+          "operator": "+",
+          "right": {
+            "type": "Literal",
+            "value": 2,
+            "raw": "2"
+          }
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_txt",
+            "raw": "\"_txt\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "Literal",
+          "value": "",
+          "raw": "\"\""
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "Identifier",
+            "name": "DJINN"
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "log"
+          }
+        },
+        "arguments": [
+          {
+            "type": "AssignmentExpression",
+            "operator": "=",
+            "left": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "DJINN"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "__scope"
+                }
+              },
+              "property": {
+                "type": "Literal",
+                "value": "_txt",
+                "raw": "\"_txt\""
+              },
+              "computed": true
+            },
+            "right": {
+              "type": "Literal",
+              "value": "waka",
+              "raw": "\"waka\""
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

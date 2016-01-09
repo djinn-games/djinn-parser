@@ -1,0 +1,91 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "var_assignments",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 3
+          },
+          "init": {
+            "type": "OperationExpression",
+            "left": {
+              "type": "Literal",
+              "line": 3,
+              "dataType": "int",
+              "value": 5
+            },
+            "right": {
+              "type": "Literal",
+              "line": 3,
+              "dataType": "int",
+              "value": 2
+            },
+            "operator": "add",
+            "line": 3
+          },
+          "line": 3
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "str",
+          "id": {
+            "type": "Identifier",
+            "name": "txt",
+            "line": 4
+          },
+          "line": 4
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "log",
+            "line": 5
+          },
+          "args": [
+            {
+              "type": "AssignmentExpression",
+              "operator": "=",
+              "left": {
+                "type": "Identifier",
+                "name": "txt",
+                "line": 5
+              },
+              "right": {
+                "type": "Literal",
+                "line": 5,
+                "dataType": "str",
+                "value": "waka"
+              },
+              "line": 5
+            }
+          ],
+          "line": 5
+        },
+        "line": 5
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
