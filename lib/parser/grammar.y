@@ -326,7 +326,8 @@ var_declaration
             type: 'VarDeclaration',
             dataType: $1,
             id: $2,
-            init: $4
+            init: $4,
+            line: @1.first_line
         };
     }
     | datatype id
@@ -334,7 +335,8 @@ var_declaration
         $$ = {
             type: 'VarDeclaration',
             dataType: $1,
-            id: $2
+            id: $2,
+            line: @1.first_line
         };
     }
     ;

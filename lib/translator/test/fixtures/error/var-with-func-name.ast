@@ -2,7 +2,7 @@
   "type": "Program",
   "name": {
     "type": "Identifier",
-    "name": "var_expressions",
+    "name": "var_with_function_name",
     "line": 1
   },
   "body": {
@@ -11,9 +11,13 @@
       {
         "type": "ExpressionSentence",
         "expression": {
-          "type": "Identifier",
-          "name": "x",
-          "line": 3
+          "type": "VarDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "log",
+            "line": 3
+          }
         },
         "line": 3
       }

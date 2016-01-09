@@ -1,0 +1,41 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "duplicated_variable",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 3
+          }
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "float",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 4
+          }
+        },
+        "line": 4
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
