@@ -69,13 +69,14 @@ Precedence | Operator | Description | Input type/s | Returns type | Associativit
 4 | `<=`, `>=` | Relational lower/greater or equal | `int`, `float` | `bool` | Left-to-right
 4 | `==`, `!=` | Relational equality or inequality | `int`, `float` | `bool` | Left-to-right
 5 | `&&`/`AND`, <code>&#124;&#124;</code>/`OR` | Logical AND and OR | `bool` | `bool` | Left-to-right
+6 | `=` | Assignment | any | any | Right-to-left
 
 
-<!--
-
-### Variables
+### Variables and constants
 
 Djinn is a **static** languages. Variables and constants are **typed** and must be declared before their use.
+
+The **difference between variables and constants** is that constants must be initialised with a value, and this value will be immutable. Variables, on the other hand, can change their value after being declared.
 
 #### Declaring variables and constants
 
@@ -95,6 +96,25 @@ STR some_string = "waka waka"
 CONST FLOAT PI = 3.141592
 ```
 
+Variables do not need to be initialised when declared. If so, a **default value** will be assigned to them:
+
+- `int` and `float`: `0`
+- `str`: `""` (empty string)
+- `bool`: `false`
+
+After being declared, variables and constants can be used in expressions by referring to their name. Examples:
+
+```
+2 * PI * radius
+```
+
+Variables can also have their value modified by using the **assignment operator** `=`. Examples:
+
+```
+radius = 5
+```
+
+<!--
 ### Scope
 
 TODO -->
