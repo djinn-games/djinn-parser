@@ -1,0 +1,105 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "var_declarations",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 3
+          },
+          "init": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 5
+          },
+          "line": 3
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "float",
+          "id": {
+            "type": "Identifier",
+            "name": "y",
+            "line": 4
+          },
+          "init": {
+            "type": "ConstDeclaration",
+            "dataType": "float",
+            "id": {
+              "type": "Identifier",
+              "name": "z",
+              "line": 4
+            },
+            "init": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "float",
+              "value": 3.5
+            },
+            "line": 4
+          },
+          "line": 4
+        },
+        "line": 4
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "bool",
+          "id": {
+            "type": "Identifier",
+            "name": "flag",
+            "line": 5
+          },
+          "init": {
+            "type": "Literal",
+            "line": 5,
+            "dataType": "bool",
+            "value": false
+          },
+          "line": 5
+        },
+        "line": 5
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "str",
+          "id": {
+            "type": "Identifier",
+            "name": "txt",
+            "line": 6
+          },
+          "init": {
+            "type": "Literal",
+            "line": 6,
+            "dataType": "str",
+            "value": "msg"
+          },
+          "line": 6
+        },
+        "line": 6
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

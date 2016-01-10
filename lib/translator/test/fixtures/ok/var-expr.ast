@@ -28,7 +28,7 @@
           "type": "OperationExpression",
           "left": {
             "type": "Identifier",
-            "name": "x",
+            "name": "X",
             "line": 4
           },
           "right": {

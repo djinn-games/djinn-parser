@@ -1,0 +1,157 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_x",
+            "raw": "\"_x\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "Literal",
+          "value": 5,
+          "raw": "5"
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_y",
+            "raw": "\"_y\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "DJINN"
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "__scope"
+              }
+            },
+            "property": {
+              "type": "Literal",
+              "value": "_z",
+              "raw": "\"_z\""
+            },
+            "computed": true
+          },
+          "right": {
+            "type": "Literal",
+            "value": 3.5,
+            "raw": "3.5"
+          }
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_flag",
+            "raw": "\"_flag\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "Literal",
+          "value": false,
+          "raw": "false"
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_txt",
+            "raw": "\"_txt\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "Literal",
+          "value": "msg",
+          "raw": "\"msg\""
+        }
+      }
+    }
+  ]
+}
