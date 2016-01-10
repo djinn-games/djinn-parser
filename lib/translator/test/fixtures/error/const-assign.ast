@@ -1,0 +1,55 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "const_assignment_error",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "ConstDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "waka",
+            "line": 3
+          },
+          "init": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 1337
+          },
+          "line": 3
+        },
+        "line": 3
+      },
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "Identifier",
+            "name": "waka",
+            "line": 4
+          },
+          "right": {
+            "type": "Literal",
+            "line": 4,
+            "dataType": "int",
+            "value": 42
+          },
+          "line": 4
+        },
+        "line": 4
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
