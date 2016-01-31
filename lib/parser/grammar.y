@@ -43,6 +43,7 @@ QUOTE   [\"]
 'END'               { return 'END'; }
 'false'             { return 'FALSE'; }
 'float'             { return 'FLOAT'; }
+'IF'                { return 'IF'; }
 'int'               { return 'INT'; }
 'PROGRAM'           { return 'PROGRAM'; }
 'str'               { return 'STRING'; }
@@ -161,7 +162,14 @@ sentence
             type: 'ExpressionSentence',
             expression: $1,
             line: @1.first_line
-        }
+        };
+    }
+    | if_sentence {
+        $$ = {
+            type: 'IfSentence',
+            if: $1,
+            line: @1.first
+        };
     }
     ;
 
@@ -374,6 +382,17 @@ assignment_expression
             right: $3,
             line: @1.first_line
         }
+    }
+    ;
+
+if_sentence
+    : 'IF' '(' expression ')' sentence_list END
+    {
+        $$ = {
+            condition: $3,
+            consequent: $5,
+            alternates: []
+        };
     }
     ;
 
