@@ -75,7 +75,7 @@
           "dataType": "float",
           "id": {
             "type": "Identifier",
-            "name": "PHI",
+            "name": "phi",
             "line": 6
           },
           "init": {

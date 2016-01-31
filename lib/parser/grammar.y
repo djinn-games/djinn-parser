@@ -102,7 +102,7 @@ id
     {
         $$ = {
             type: 'Identifier',
-            name: $1,
+            name: $1.toLowerCase(),
             line: @1.first_line
         }
     }
