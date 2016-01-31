@@ -1,0 +1,124 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_flag",
+            "raw": "\"_flag\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "Literal",
+          "value": true,
+          "raw": "true"
+        }
+      }
+    },
+    {
+      "type": "IfStatement",
+      "test": {
+        "type": "MemberExpression",
+        "object": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "Identifier",
+            "name": "DJINN"
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "__scope"
+          }
+        },
+        "property": {
+          "type": "Literal",
+          "value": "_flag",
+          "raw": "\"_flag\""
+        },
+        "computed": true
+      },
+      "consequent": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "Identifier",
+                  "name": "DJINN"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "__scope"
+                }
+              },
+              "property": {
+                "type": "Literal",
+                "value": "_flag",
+                "raw": "\"_flag\""
+              },
+              "computed": true
+            }
+          },
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "AssignmentExpression",
+              "operator": "=",
+              "left": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "DJINN"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "__scope"
+                  }
+                },
+                "property": {
+                  "type": "Literal",
+                  "value": "__flag",
+                  "raw": "\"__flag\""
+                },
+                "computed": true
+              },
+              "right": {
+                "type": "Literal",
+                "value": false,
+                "raw": "false"
+              }
+            }
+          }
+        ]
+      },
+      "alternate": {
+        "type": "BlockStatement",
+        "body": []
+      }
+    }
+  ]
+}
