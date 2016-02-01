@@ -29,8 +29,10 @@
               "line": 3
             }
           ],
-          "alternates": []
-        }
+          "alternates": [],
+          "line": 3
+        },
+        "line": 3
       },
       {
         "type": "IfSentence",
@@ -74,8 +76,10 @@
               "line": 6
             }
           ],
-          "alternates": []
-        }
+          "alternates": [],
+          "line": 4
+        },
+        "line": 4
       }
     ],
     "line": 2

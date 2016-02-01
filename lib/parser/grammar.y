@@ -168,7 +168,7 @@ sentence
         $$ = {
             type: 'IfSentence',
             if: $1,
-            line: @1.first
+            line: @1.first_line
         };
     }
     ;
@@ -391,7 +391,8 @@ if_sentence
         $$ = {
             condition: $3,
             consequent: $5,
-            alternates: []
+            alternates: [],
+            line: @1.first_line
         };
     }
     ;
