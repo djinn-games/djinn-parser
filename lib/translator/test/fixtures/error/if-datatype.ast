@@ -1,0 +1,28 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "if_datatype_error",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 0
+          },
+          "consequent": [],
+          "alternates": []
+        }
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
