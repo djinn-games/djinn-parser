@@ -18,8 +18,10 @@
             "value": 0
           },
           "consequent": [],
-          "alternates": []
-        }
+          "alternates": [],
+          "line": 3
+        },
+        "line": 3
       }
     ],
     "line": 2

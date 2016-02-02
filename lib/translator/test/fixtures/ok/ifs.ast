@@ -34,7 +34,7 @@
           "condition": {
             "type": "Identifier",
             "name": "flag",
-            "line": 4
+            "line": 5
           },
           "consequent": [
             {
@@ -42,9 +42,9 @@
               "expression": {
                 "type": "Identifier",
                 "name": "flag",
-                "line": 5
+                "line": 6
               },
-              "line": 5
+              "line": 6
             },
             {
               "type": "ExpressionSentence",
@@ -54,21 +54,62 @@
                 "id": {
                   "type": "Identifier",
                   "name": "flag",
-                  "line": 6
+                  "line": 7
                 },
                 "init": {
                   "type": "Literal",
-                  "line": 6,
+                  "line": 7,
                   "dataType": "bool",
                   "value": false
                 },
-                "line": 6
+                "line": 7
               },
-              "line": 6
+              "line": 7
             }
           ],
-          "alternates": []
-        }
+          "alternates": [],
+          "line": 5
+        },
+        "line": 5
+      },
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 10,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [
+            {
+              "type": "ExpressionSentence",
+              "expression": {
+                "type": "Literal",
+                "line": 11,
+                "dataType": "int",
+                "value": 0
+              },
+              "line": 11
+            }
+          ],
+          "alternates": [
+            [
+              {
+                "type": "ExpressionSentence",
+                "expression": {
+                  "type": "Literal",
+                  "line": 13,
+                  "dataType": "int",
+                  "value": 1
+                },
+                "line": 13
+              }
+            ]
+          ],
+          "line": 10
+        },
+        "line": 10
       }
     ],
     "line": 2
