@@ -10,4 +10,16 @@ BEGIN
     ELSE
         2
     END
+
+    IF (false)
+    ELSEIF (true)
+        2
+    END
+
+    IF (false)
+    ELSEIF (false)
+    ELSEIF (true)
+    ELSE
+        0
+    END
 END

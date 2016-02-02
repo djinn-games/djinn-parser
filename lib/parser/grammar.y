@@ -41,6 +41,7 @@ QUOTE   [\"]
 'bool'              { return 'BOOL'; }
 'CONST'             { return 'CONST'; }
 'ELSE'              { return 'ELSE'; }
+'ELSEIF'            { return 'ELSEIF'; }
 'END'               { return 'END'; }
 'false'             { return 'FALSE'; }
 'float'             { return 'FLOAT'; }
@@ -405,6 +406,50 @@ if_sentence
             line: @1.first_line
         };
     }
+    | 'IF' '(' expression ')' sentence_list elseif_list END
+    {
+        $$ = {
+            condition: $3,
+            consequent: $5,
+            alternates: $6,
+            line: @1.first_line
+        };
+    }
+    | 'IF' '(' expression ')' sentence_list elseif_list ELSE sentence_list END
+    {
+        $$ = {
+            condition: $3,
+            consequent: $5,
+            alternates: $6.concat($8),
+            line: @1.first_line
+        };
+    }
     ;
 
+elseif_list
+    : elseif_unit
+    {
+        $$ = [$1];
+    }
+    | elseif_list elseif_unit
+    {
+        $1.push($2)
+        $$ = $1;
+    }
+    ;
+
+elseif_unit
+    : ELSEIF '(' expression ')' sentence_list
+    {
+        $$ = {
+            type: 'IfSentence',
+            if: {
+                condition: $3,
+                consequent: $5,
+                alternates: []
+            },
+            line: @1.first_line
+        };
+    }
+    ;
 %%

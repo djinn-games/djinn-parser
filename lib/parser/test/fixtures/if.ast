@@ -119,6 +119,101 @@
           "line": 9
         },
         "line": 9
+      },
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 14,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [],
+          "alternates": [
+            {
+              "type": "IfSentence",
+              "if": {
+                "condition": {
+                  "type": "Literal",
+                  "line": 15,
+                  "dataType": "bool",
+                  "value": true
+                },
+                "consequent": [
+                  {
+                    "type": "ExpressionSentence",
+                    "expression": {
+                      "type": "Literal",
+                      "line": 16,
+                      "dataType": "int",
+                      "value": 2
+                    },
+                    "line": 16
+                  }
+                ],
+                "alternates": []
+              },
+              "line": 15
+            }
+          ],
+          "line": 14
+        },
+        "line": 14
+      },
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 19,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [],
+          "alternates": [
+            {
+              "type": "IfSentence",
+              "if": {
+                "condition": {
+                  "type": "Literal",
+                  "line": 20,
+                  "dataType": "bool",
+                  "value": false
+                },
+                "consequent": [],
+                "alternates": []
+              },
+              "line": 20
+            },
+            {
+              "type": "IfSentence",
+              "if": {
+                "condition": {
+                  "type": "Literal",
+                  "line": 21,
+                  "dataType": "bool",
+                  "value": true
+                },
+                "consequent": [],
+                "alternates": []
+              },
+              "line": 21
+            },
+            {
+              "type": "ExpressionSentence",
+              "expression": {
+                "type": "Literal",
+                "line": 23,
+                "dataType": "int",
+                "value": 0
+              },
+              "line": 23
+            }
+          ],
+          "line": 19
+        },
+        "line": 19
       }
     ],
     "line": 2
