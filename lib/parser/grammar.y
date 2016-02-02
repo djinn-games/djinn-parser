@@ -40,6 +40,7 @@ QUOTE   [\"]
 'BEGIN'             { return 'BEGIN'; }
 'bool'              { return 'BOOL'; }
 'CONST'             { return 'CONST'; }
+'ELSE'              { return 'ELSE'; }
 'END'               { return 'END'; }
 'false'             { return 'FALSE'; }
 'float'             { return 'FLOAT'; }
@@ -392,6 +393,15 @@ if_sentence
             condition: $3,
             consequent: $5,
             alternates: [],
+            line: @1.first_line
+        };
+    }
+    | 'IF' '(' expression ')' sentence_list ELSE sentence_list END
+    {
+        $$ = {
+            condition: $3,
+            consequent: $5,
+            alternates: [$7],
             line: @1.first_line
         };
     }

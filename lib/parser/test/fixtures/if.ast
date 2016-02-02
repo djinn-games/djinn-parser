@@ -80,6 +80,45 @@
           "line": 4
         },
         "line": 4
+      },
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 9,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [
+            {
+              "type": "ExpressionSentence",
+              "expression": {
+                "type": "Literal",
+                "line": 9,
+                "dataType": "int",
+                "value": 5
+              },
+              "line": 9
+            }
+          ],
+          "alternates": [
+            [
+              {
+                "type": "ExpressionSentence",
+                "expression": {
+                  "type": "Literal",
+                  "line": 11,
+                  "dataType": "int",
+                  "value": 2
+                },
+                "line": 11
+              }
+            ]
+          ],
+          "line": 9
+        },
+        "line": 9
       }
     ],
     "line": 2
