@@ -110,6 +110,86 @@
           "line": 10
         },
         "line": 10
+      },
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 16,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [],
+          "alternates": [
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "Literal",
+                    "line": 17,
+                    "dataType": "bool",
+                    "value": false
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "Literal",
+                        "line": 18,
+                        "dataType": "int",
+                        "value": 0
+                      },
+                      "line": 18
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 17
+              }
+            ],
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "Literal",
+                    "line": 19,
+                    "dataType": "bool",
+                    "value": true
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "Literal",
+                        "line": 20,
+                        "dataType": "int",
+                        "value": 1
+                      },
+                      "line": 20
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 19
+              }
+            ],
+            {
+              "type": "ExpressionSentence",
+              "expression": {
+                "type": "Literal",
+                "line": 22,
+                "dataType": "int",
+                "value": 0
+              },
+              "line": 22
+            }
+          ],
+          "line": 16
+        },
+        "line": 16
       }
     ],
     "line": 2

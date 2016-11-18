@@ -121,38 +121,80 @@
       }
     },
     {
-      "type": "IfStatement",
-      "test": {
-        "type": "Literal",
-        "value": false,
-        "raw": "false"
-      },
-      "consequent": {
-        "type": "BlockStatement",
-        "body": [
-          {
-            "type": "ExpressionStatement",
-            "expression": {
-              "type": "Literal",
-              "value": 0,
-              "raw": "0"
-            }
-          }
-        ]
-      },
-      "alternate": {
-        "type": "BlockStatement",
-        "body": [
-          {
-            "type": "ExpressionStatement",
-            "expression": {
-              "type": "Literal",
-              "value": 1,
-              "raw": "1"
-            }
-          }
-        ]
-      }
-    }
+       "type": "IfStatement",
+       "test": {
+         "type": "Literal",
+         "value": false,
+         "raw": "false"
+       },
+       "consequent": {
+         "type": "BlockStatement",
+         "body": [
+           {
+             "type": "ExpressionStatement",
+             "expression": {
+               "type": "Literal",
+               "value": 0,
+               "raw": "0"
+             }
+           }
+         ]
+       },
+       "alternate": {
+         "type": "IfStatement",
+         "test": {
+           "type": "Literal",
+           "value": false,
+           "raw": "false"
+         },
+         "consequent": {
+           "type": "BlockStatement",
+           "body": [
+             {
+               "type": "ExpressionStatement",
+               "expression": {
+                 "type": "Literal",
+                 "value": 0,
+                 "raw": "0"
+               }
+             }
+           ]
+         },
+         "alternate": {
+           "type": "IfStatement",
+           "test": {
+             "type": "Literal",
+             "value": true,
+             "raw": "true"
+           },
+           "consequent": {
+             "type": "BlockStatement",
+             "body": [
+               {
+                 "type": "ExpressionStatement",
+                 "expression": {
+                   "type": "Literal",
+                   "value": 1,
+                   "raw": "1"
+                 }
+               }
+             ]
+           },
+           "alternate": {
+             "type": "BlockStatement",
+             "body": [
+               {
+                 "type": "ExpressionStatement",
+                 "expression": {
+                   "type": "Literal",
+                   "value": 0,
+                   "raw": "0"
+                 }
+               }
+             ]
+           }
+         }
+       }
+     }
   ]
 }

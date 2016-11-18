@@ -429,11 +429,11 @@ if_sentence
 elseif_list
     : elseif_unit
     {
-        $$ = [$1];
+        $$ = [[$1]];
     }
     | elseif_list elseif_unit
     {
-        $1.push($2)
+        $1.push([$2])
         $$ = $1;
     }
     ;
