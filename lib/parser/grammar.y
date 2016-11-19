@@ -417,7 +417,12 @@ if_sentence
     }
     | 'IF' '(' expression ')' sentence_list elseif_list ELSE sentence_list END
     {
-
+        $$ = {
+            condition: $3,
+            consequent: $5,
+            alternates: $6.concat([$8]),
+            line: @1.first_line
+        };
     }
     ;
 

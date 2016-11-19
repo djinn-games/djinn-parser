@@ -88,6 +88,72 @@
           "line": 3
         },
         "line": 3
+      },
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 11,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [
+            {
+              "type": "ExpressionSentence",
+              "expression": {
+                "type": "Literal",
+                "line": 12,
+                "dataType": "int",
+                "value": 3
+              },
+              "line": 12
+            }
+          ],
+          "alternates": [
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "Literal",
+                    "line": 13,
+                    "dataType": "bool",
+                    "value": false
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "Literal",
+                        "line": 14,
+                        "dataType": "int",
+                        "value": 4
+                      },
+                      "line": 14
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 13
+              }
+            ],
+            [
+              {
+                "type": "ExpressionSentence",
+                "expression": {
+                  "type": "Literal",
+                  "line": 16,
+                  "dataType": "int",
+                  "value": 5
+                },
+                "line": 16
+              }
+            ]
+          ],
+          "line": 11
+        },
+        "line": 11
       }
     ],
     "line": 2
