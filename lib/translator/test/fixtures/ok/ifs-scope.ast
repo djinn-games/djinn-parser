@@ -1,0 +1,129 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "ifs_scope",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "ExpressionSentence",
+        "expression": {
+          "type": "VarDeclaration",
+          "dataType": "bool",
+          "id": {
+            "type": "Identifier",
+            "name": "x",
+            "line": 3
+          },
+          "init": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "bool",
+            "value": false
+          },
+          "line": 3
+        },
+        "line": 3
+      },
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "VarDeclaration",
+            "dataType": "bool",
+            "id": {
+              "type": "Identifier",
+              "name": "x",
+              "line": 4
+            },
+            "init": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "bool",
+              "value": false
+            },
+            "line": 4
+          },
+          "consequent": [
+            {
+              "type": "ExpressionSentence",
+              "expression": {
+                "type": "VarDeclaration",
+                "dataType": "int",
+                "id": {
+                  "type": "Identifier",
+                  "name": "y",
+                  "line": 5
+                },
+                "init": {
+                  "type": "Literal",
+                  "line": 5,
+                  "dataType": "int",
+                  "value": 1
+                },
+                "line": 5
+              },
+              "line": 5
+            }
+          ],
+          "alternates": [
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "VarDeclaration",
+                    "dataType": "bool",
+                    "id": {
+                      "type": "Identifier",
+                      "name": "x",
+                      "line": 6
+                    },
+                    "init": {
+                      "type": "Literal",
+                      "line": 6,
+                      "dataType": "bool",
+                      "value": true
+                    },
+                    "line": 6
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "VarDeclaration",
+                        "dataType": "int",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "y",
+                          "line": 7
+                        },
+                        "init": {
+                          "type": "Literal",
+                          "line": 7,
+                          "dataType": "int",
+                          "value": 2
+                        },
+                        "line": 7
+                      },
+                      "line": 7
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 6
+              }
+            ]
+          ],
+          "line": 4
+        },
+        "line": 4
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

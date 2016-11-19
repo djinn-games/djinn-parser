@@ -28,12 +28,12 @@
         },
         "right": {
           "type": "BinaryExpression",
+          "operator": "+",
           "left": {
             "type": "Literal",
             "value": 5,
             "raw": "5"
           },
-          "operator": "+",
           "right": {
             "type": "Literal",
             "value": 2,

@@ -1,0 +1,179 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "_x",
+            "raw": "\"_x\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "Literal",
+          "value": false,
+          "raw": "false"
+        }
+      }
+    },
+    {
+      "type": "IfStatement",
+      "test": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "Identifier",
+              "name": "DJINN"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "__scope"
+            }
+          },
+          "property": {
+            "type": "Literal",
+            "value": "__x",
+            "raw": "\"__x\""
+          },
+          "computed": true
+        },
+        "right": {
+          "type": "Literal",
+          "value": false,
+          "raw": "false"
+        }
+      },
+      "consequent": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "AssignmentExpression",
+              "operator": "=",
+              "left": {
+                "type": "MemberExpression",
+                "object": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "Identifier",
+                    "name": "DJINN"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "__scope"
+                  }
+                },
+                "property": {
+                  "type": "Literal",
+                  "value": "__y",
+                  "raw": "\"__y\""
+                },
+                "computed": true
+              },
+              "right": {
+                "type": "Literal",
+                "value": 1,
+                "raw": "1"
+              }
+            }
+          }
+        ]
+      },
+      "alternate": {
+        "type": "IfStatement",
+        "test": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "object": {
+              "type": "MemberExpression",
+              "object": {
+                "type": "Identifier",
+                "name": "DJINN"
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "__scope"
+              }
+            },
+            "property": {
+              "type": "Literal",
+              "value": "__x",
+              "raw": "\"__x\""
+            },
+            "computed": true
+          },
+          "right": {
+            "type": "Literal",
+            "value": true,
+            "raw": "true"
+          }
+        },
+        "consequent": {
+          "type": "BlockStatement",
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "expression": {
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                  "type": "MemberExpression",
+                  "object": {
+                    "type": "MemberExpression",
+                    "object": {
+                      "type": "Identifier",
+                      "name": "DJINN"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "__scope"
+                    }
+                  },
+                  "property": {
+                    "type": "Literal",
+                    "value": "__y",
+                    "raw": "\"__y\""
+                  },
+                  "computed": true
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 2,
+                  "raw": "2"
+                }
+              }
+            }
+          ]
+        },
+        "alternate": {
+          "type": "BlockStatement",
+          "body": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "if_scope_missing_var",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "VarDeclaration",
+            "dataType": "bool",
+            "id": {
+              "type": "Identifier",
+              "name": "x",
+              "line": 3
+            },
+            "line": 3
+          },
+          "consequent": [],
+          "alternates": [
+            [
+              {
+                "type": "ExpressionSentence",
+                "expression": {
+                  "type": "Identifier",
+                  "name": "x",
+                  "line": 5
+                },
+                "line": 5
+              }
+            ]
+          ],
+          "line": 3
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

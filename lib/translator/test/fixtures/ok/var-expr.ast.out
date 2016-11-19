@@ -37,6 +37,7 @@
       "type": "ExpressionStatement",
       "expression": {
         "type": "BinaryExpression",
+        "operator": "+",
         "left": {
           "type": "MemberExpression",
           "object": {
@@ -57,7 +58,6 @@
           },
           "computed": true
         },
-        "operator": "+",
         "right": {
           "type": "Literal",
           "value": 5,

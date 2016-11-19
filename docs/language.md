@@ -11,6 +11,15 @@ BEGIN
 END
 ```
 
+Djinn is a **case insensitive** language. This means that the following code would be equivalent to the previous example:
+
+```
+program hello
+begin
+    log("hello")
+end
+```
+
 ## Basics
 
 ### Comments
@@ -27,6 +36,8 @@ Comments in Djinn are created with the `#` character.
 Identifiers are used to name functions, variables, etc. An identifier can be made from the characters `a-z`, `ç`, `ñ`, `_` and digits. They must begin with an alphabetic character.
 
 Some **valid** identifiers are: `health`, `bad_guy3`, `caçaha`, `piñata`. Some **invalid** identifier examples are: `_life`, `3a`, `日本`.
+
+Since Djinn is a **case insensitive** language, all `radius`, `Radius`, `RaDiUS` would refer to the same thing.
 
 ### The program block
 
@@ -74,7 +85,7 @@ Precedence | Operator | Description | Input type/s | Returns type | Associativit
 
 ### Variables and constants
 
-Djinn is a **static** languages. Variables and constants are **typed** and must be declared before their use.
+Djinn is a **static** language. Variables and constants are **typed** and must be declared before their use.
 
 The **difference between variables and constants** is that constants must be initialised with a value, and this value will be immutable. Variables, on the other hand, can change their value after being declared.
 
@@ -114,7 +125,10 @@ Variables can also have their value modified by using the **assignment operator*
 radius = 5
 ```
 
+## Sentences
+
+### Conditional sentences
+
 <!--
 ### Scope
-
 TODO -->

@@ -77,6 +77,72 @@
           "line": 3
         },
         "line": 3
+      },
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 10,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [
+            {
+              "type": "ExpressionSentence",
+              "expression": {
+                "type": "Literal",
+                "line": 11,
+                "dataType": "int",
+                "value": 1
+              },
+              "line": 11
+            }
+          ],
+          "alternates": [
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "Literal",
+                    "line": 12,
+                    "dataType": "bool",
+                    "value": false
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "Literal",
+                        "line": 13,
+                        "dataType": "int",
+                        "value": 2
+                      },
+                      "line": 13
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 12
+              }
+            ],
+            [
+              {
+                "type": "ExpressionSentence",
+                "expression": {
+                  "type": "Literal",
+                  "line": 15,
+                  "dataType": "int",
+                  "value": 3
+                },
+                "line": 15
+              }
+            ]
+          ],
+          "line": 10
+        },
+        "line": 10
       }
     ],
     "line": 2
