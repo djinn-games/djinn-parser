@@ -129,6 +129,56 @@ radius = 5
 
 ### Conditional sentences
 
-<!--
-### Scope
-TODO -->
+`condition` must be an expression with `bool` type.
+
+```
+IF (<condition>)
+    <sentences>
+END
+
+IF (condition)
+    <sentences>
+ELSE
+    <sentences>
+END
+
+IF (condition)
+    <sentences>
+ELSEIF (condition)
+    <sentences>
+# ELSEIF ...
+END
+
+IF (condition)
+    <sentences>
+ELSEIF (condition)
+    <sentences>
+ELSE
+    <sentences>
+END
+```
+
+
+
+## Scope
+
+Some sentences blocks create a new scope.
+
+**Conditional blocks** create a new scope, and this scope starts at the _condition_ –not just _inside_ the block.
+
+For instance, this does not yield an `Indentifier already exists` error:
+
+```
+BOOL flag = true
+IF (true)
+    BOOL flag = false
+END
+```
+
+This _does not_ yield an `Identifier already exists` error either, since the scope is created before the condition is evaluated:
+
+```
+BOOL flag = false
+IF (BOOL flag = true)
+END
+```
