@@ -1,0 +1,85 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "elseifs",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [],
+          "alternates": [
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "Literal",
+                    "line": 4,
+                    "dataType": "bool",
+                    "value": false
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "Literal",
+                        "line": 5,
+                        "dataType": "int",
+                        "value": 0
+                      },
+                      "line": 5
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 4
+              }
+            ],
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "Literal",
+                    "line": 6,
+                    "dataType": "bool",
+                    "value": true
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "Literal",
+                        "line": 7,
+                        "dataType": "int",
+                        "value": 1
+                      },
+                      "line": 7
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 6
+              }
+            ]
+          ],
+          "line": 3
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

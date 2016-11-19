@@ -1,0 +1,96 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "elseifs",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "IfSentence",
+        "if": {
+          "condition": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "bool",
+            "value": false
+          },
+          "consequent": [
+            {
+              "type": "ExpressionSentence",
+              "expression": {
+                "type": "Literal",
+                "line": 4,
+                "dataType": "int",
+                "value": 0
+              },
+              "line": 4
+            }
+          ],
+          "alternates": [
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "Literal",
+                    "line": 5,
+                    "dataType": "bool",
+                    "value": false
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "Literal",
+                        "line": 6,
+                        "dataType": "int",
+                        "value": 1
+                      },
+                      "line": 6
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 5
+              }
+            ],
+            [
+              {
+                "type": "IfSentence",
+                "if": {
+                  "condition": {
+                    "type": "Literal",
+                    "line": 7,
+                    "dataType": "bool",
+                    "value": true
+                  },
+                  "consequent": [
+                    {
+                      "type": "ExpressionSentence",
+                      "expression": {
+                        "type": "Literal",
+                        "line": 8,
+                        "dataType": "int",
+                        "value": 2
+                      },
+                      "line": 8
+                    }
+                  ],
+                  "alternates": []
+                },
+                "line": 7
+              }
+            ]
+          ],
+          "line": 3
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
