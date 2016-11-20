@@ -1,0 +1,25 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "loop_sentence",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "LoopSentence",
+        "body": [
+          {
+            "type": "BreakSentence",
+            "line": 4
+          }
+        ],
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
