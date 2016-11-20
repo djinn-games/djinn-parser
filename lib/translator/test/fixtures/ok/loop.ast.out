@@ -1,0 +1,20 @@
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "ForStatement",
+            "init": null,
+            "test": null,
+            "update": null,
+            "body": {
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "type": "BreakStatement",
+                        "label": null
+                    }
+                ]
+            }
+        }
+    ]
+}
