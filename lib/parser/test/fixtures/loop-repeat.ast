@@ -1,0 +1,37 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "repeat_until",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "RepeatUntilSentence",
+        "sentences": [
+          {
+            "type": "ExpressionSentence",
+            "expression": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "int",
+              "value": 0
+            },
+            "line": 4
+          }
+        ],
+        "test": {
+          "type": "Literal",
+          "line": 5,
+          "dataType": "bool",
+          "value": true
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}

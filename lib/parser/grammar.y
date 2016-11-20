@@ -50,8 +50,10 @@ QUOTE   [\"]
 'int'               { return 'INT'; }
 'LOOP'              { return 'LOOP'; }
 'PROGRAM'           { return 'PROGRAM'; }
+'REPEAT'            { return 'REPEAT'; }
 'str'               { return 'STRING'; }
 'true'              { return 'TRUE'; }
+'UNTIL'             { return 'UNTIL'; }
 
 '+'                 { return '+'; }
 '-'                 { return '-'; }
@@ -177,6 +179,7 @@ sentence
     }
     | loop_sentence
     | break_sentence
+    | repeat_sentence
     ;
 
 expression
@@ -489,6 +492,18 @@ loop_sentence
         $$ = {
             type: 'LoopSentence',
             sentences: $2,
+            line: @1.first_line
+        };
+    }
+    ;
+
+repeat_sentence
+    : REPEAT sentence_list UNTIL '(' expression ')'
+    {
+        $$ = {
+            type: 'RepeatUntilSentence',
+            sentences: $2,
+            test: $5,
             line: @1.first_line
         };
     }
