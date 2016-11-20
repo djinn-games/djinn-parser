@@ -12,7 +12,23 @@
         "type": "LoopSentence",
         "sentences": [
           {
-            "type": "BreakSentence",
+            "type": "IfSentence",
+            "if": {
+              "condition": {
+                "type": "Literal",
+                "line": 4,
+                "dataType": "bool",
+                "value": true
+              },
+              "consequent": [
+                {
+                  "type": "BreakSentence",
+                  "line": 4
+                }
+              ],
+              "alternates": [],
+              "line": 4
+            },
             "line": 4
           }
         ],

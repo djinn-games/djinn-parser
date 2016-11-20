@@ -1,6 +1,6 @@
 PROGRAM loop_sentence
 BEGIN
     LOOP
-        BREAK
+        IF (true) BREAK END
     END
 END

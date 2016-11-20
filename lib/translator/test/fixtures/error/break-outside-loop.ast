@@ -1,0 +1,24 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "break_outside_loop",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "LoopSentence",
+        "sentences": [],
+        "line": 3
+      },
+      {
+        "type": "BreakSentence",
+        "line": 5
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
