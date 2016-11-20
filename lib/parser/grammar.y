@@ -38,6 +38,7 @@ QUOTE   [\"]
 <<EOF>>             { return 'EOF'; }
 
 'BEGIN'             { return 'BEGIN'; }
+'BREAK'             { return 'BREAK'; }
 'bool'              { return 'BOOL'; }
 'CONST'             { return 'CONST'; }
 'ELSE'              { return 'ELSE'; }
@@ -47,6 +48,7 @@ QUOTE   [\"]
 'float'             { return 'FLOAT'; }
 'IF'                { return 'IF'; }
 'int'               { return 'INT'; }
+'LOOP'              { return 'LOOP'; }
 'PROGRAM'           { return 'PROGRAM'; }
 'str'               { return 'STRING'; }
 'true'              { return 'TRUE'; }
@@ -173,6 +175,8 @@ sentence
             line: @1.first_line
         };
     }
+    | loop_sentence
+    | break_sentence
     ;
 
 expression
@@ -388,7 +392,7 @@ assignment_expression
     ;
 
 if_sentence
-    : 'IF' '(' expression ')' sentence_list END
+    : IF '(' expression ')' sentence_list END
     {
         $$ = {
             condition: $3,
@@ -397,7 +401,7 @@ if_sentence
             line: @1.first_line
         };
     }
-    | 'IF' '(' expression ')' sentence_list ELSE sentence_list END
+    | IF '(' expression ')' sentence_list ELSE sentence_list END
     {
         $$ = {
             condition: $3,
@@ -406,7 +410,7 @@ if_sentence
             line: @1.first_line
         };
     }
-    | 'IF' '(' expression ')' sentence_list elseif_list END
+    | IF '(' expression ')' sentence_list elseif_list END
     {
         $$ = {
             condition: $3,
@@ -415,7 +419,7 @@ if_sentence
             line: @1.first_line
         };
     }
-    | 'IF' '(' expression ')' sentence_list elseif_list ELSE sentence_list END
+    | IF '(' expression ')' sentence_list elseif_list ELSE sentence_list END
     {
         $$ = {
             condition: $3,
@@ -448,6 +452,27 @@ elseif_unit
                 consequent: $5,
                 alternates: []
             },
+            line: @1.first_line
+        };
+    }
+    ;
+
+break_sentence
+    : BREAK
+    {
+        $$ = {
+            type: 'BreakSentence',
+            line: @1.first_line
+        };
+    }
+    ;
+
+loop_sentence
+    : LOOP sentence_list END
+    {
+        $$ = {
+            type: 'LoopSentence',
+            body: $2,
             line: @1.first_line
         };
     }
