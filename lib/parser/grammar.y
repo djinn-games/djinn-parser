@@ -176,6 +176,7 @@ sentence
         };
     }
     | loop_sentence
+    | break_sentence
     ;
 
 expression
@@ -472,28 +473,6 @@ elseif_unit
 // loops
 // -----------------------------------------------------------------------------
 
-looped_sentence_list
-    : air
-    {
-        $$ = [];
-    }
-    | air looped_sentence
-    {
-        $$ = [$2]
-    }
-    | air looped_sentence EOL looped_sentence_list
-    {
-        $4.splice(0, 0, $2); // add sentence to sentence_list array
-        $$ = $4;
-    }
-    ;
-
-looped_sentence
-    : sentence
-    | break_sentence
-    ;
-
-
 break_sentence
     : BREAK
     {
@@ -505,11 +484,11 @@ break_sentence
     ;
 
 loop_sentence
-    : LOOP looped_sentence_list END
+    : LOOP sentence_list END
     {
         $$ = {
             type: 'LoopSentence',
-            body: $2,
+            sentences: $2,
             line: @1.first_line
         };
     }

@@ -10,7 +10,7 @@
     "sentences": [
       {
         "type": "LoopSentence",
-        "body": [
+        "sentences": [
           {
             "type": "BreakSentence",
             "line": 4
