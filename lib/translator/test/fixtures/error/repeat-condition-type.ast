@@ -1,0 +1,26 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "wrong_repeat_condition_type",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "RepeatUntilSentence",
+        "sentences": [],
+        "test": {
+          "type": "Literal",
+          "line": 4,
+          "dataType": "int",
+          "value": 1
+        },
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
