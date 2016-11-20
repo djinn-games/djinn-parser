@@ -1,0 +1,132 @@
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "ForStatement",
+            "init": {
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                    "type": "MemberExpression",
+                    "computed": true,
+                    "object": {
+                        "type": "MemberExpression",
+                        "object": {
+                            "type": "Identifier",
+                            "name": "DJINN"
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "__scope"
+                        }
+                    },
+                    "property": {
+                        "type": "Literal",
+                        "value": "__i",
+                        "raw": "\"__i\""
+                    }
+                },
+                "right": {
+                    "type": "Literal",
+                    "value": 0,
+                    "raw": "0"
+                }
+            },
+            "test": {
+                "type": "BinaryExpression",
+                "operator": "!=",
+                "left": {
+                    "type": "MemberExpression",
+                    "computed": true,
+                    "object": {
+                        "type": "MemberExpression",
+                        "object": {
+                            "type": "Identifier",
+                            "name": "DJINN"
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "__scope"
+                        }
+                    },
+                    "property": {
+                        "type": "Literal",
+                        "value": "__i",
+                        "raw": "\"__i\""
+                    }
+                },
+                "right": {
+                    "type": "Literal",
+                    "value": 6,
+                    "raw": "6"
+                }
+            },
+            "update": {
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                    "type": "MemberExpression",
+                    "computed": true,
+                    "object": {
+                        "type": "MemberExpression",
+                        "object": {
+                            "type": "Identifier",
+                            "name": "DJINN"
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "__scope"
+                        }
+                    },
+                    "property": {
+                        "type": "Literal",
+                        "value": "__i",
+                        "raw": "\"__i\""
+                    }
+                },
+                "right": {
+                    "type": "BinaryExpression",
+                    "operator": "+",
+                    "left": {
+                        "type": "MemberExpression",
+                        "computed": true,
+                        "object": {
+                            "type": "MemberExpression",
+                            "object": {
+                                "type": "Identifier",
+                                "name": "DJINN"
+                            },
+                            "property": {
+                                "type": "Identifier",
+                                "name": "__scope"
+                            }
+                        },
+                        "property": {
+                            "type": "Literal",
+                            "value": "__i",
+                            "raw": "\"__i\""
+                        }
+                    },
+                    "right": {
+                        "type": "Literal",
+                        "value": 2,
+                        "raw": "2"
+                    }
+                }
+            },
+            "body": {
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                            "type": "Literal",
+                            "value": 0,
+                            "raw": "0"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

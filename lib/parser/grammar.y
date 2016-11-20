@@ -20,6 +20,26 @@ function bopExpr(op, left, right) {
         operator: op
     };
 }
+
+function fromLoop(line, init, to, step, sentences) {
+    if (typeof step === 'number') {
+        step = {
+            type: 'Literal',
+            dataType: 'int',
+            line: line,
+            value: step
+        };
+    }
+
+    return {
+        type: 'FromSentence',
+        init: init,
+        to: to,
+        step: step,
+        sentences: sentences,
+        line: line
+    };
+}
 %}
 
 %lex
@@ -46,12 +66,15 @@ QUOTE   [\"]
 'END'               { return 'END'; }
 'false'             { return 'FALSE'; }
 'float'             { return 'FLOAT'; }
+'FROM'              { return 'FROM'; }
 'IF'                { return 'IF'; }
 'int'               { return 'INT'; }
 'LOOP'              { return 'LOOP'; }
 'PROGRAM'           { return 'PROGRAM'; }
 'REPEAT'            { return 'REPEAT'; }
+'STEP'              { return 'STEP'; }
 'str'               { return 'STRING'; }
+'TO'                { return 'TO'; }
 'true'              { return 'TRUE'; }
 'UNTIL'             { return 'UNTIL'; }
 
@@ -180,6 +203,7 @@ sentence
     | loop_sentence
     | break_sentence
     | repeat_sentence
+    | from_sentence
     ;
 
 expression
@@ -507,6 +531,17 @@ repeat_sentence
             line: @1.first_line
         };
     }
+    ;
+
+from_sentence
+    : FROM assignment_expression TO expression EOL sentence_list END
+    { $$ = fromLoop(@1.first_line, $2, $4, 1, $6); }
+    | FROM var_declaration TO expression EOL sentence_list END
+    { $$ = fromLoop(@1.first_line, $2, $4, 1, $6); }
+    | FROM assignment_expression TO expression STEP expression EOL sentence_list END
+    { $$ = fromLoop(@1.first_line, $2, $4, $6, $8); }
+    | FROM var_declaration TO expression STEP expression EOL sentence_list END
+    { $$ = fromLoop(@1.first_line, $2, $4, $6, $8); }
     ;
 
 %%

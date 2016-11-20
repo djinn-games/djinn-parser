@@ -1,0 +1,59 @@
+{
+  "type": "Program",
+  "name": {
+    "type": "Identifier",
+    "name": "from_loop",
+    "line": 1
+  },
+  "body": {
+    "type": "Body",
+    "sentences": [
+      {
+        "type": "FromSentence",
+        "init": {
+          "type": "VarDeclaration",
+          "dataType": "int",
+          "id": {
+            "type": "Identifier",
+            "name": "i",
+            "line": 3
+          },
+          "init": {
+            "type": "Literal",
+            "line": 3,
+            "dataType": "int",
+            "value": 0
+          },
+          "line": 3
+        },
+        "to": {
+          "type": "Literal",
+          "line": 3,
+          "dataType": "int",
+          "value": 6
+        },
+        "step": {
+          "type": "Literal",
+          "line": 3,
+          "dataType": "int",
+          "value": 2
+        },
+        "sentences": [
+          {
+            "type": "ExpressionSentence",
+            "expression": {
+              "type": "Literal",
+              "line": 4,
+              "dataType": "int",
+              "value": 0
+            },
+            "line": 4
+          }
+        ],
+        "line": 3
+      }
+    ],
+    "line": 2
+  },
+  "line": 1
+}
