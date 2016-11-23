@@ -164,7 +164,7 @@ END
 
 Some sentences blocks create a new scope.
 
-**Conditional blocks** create a new scope, and this scope starts at the _condition_ –not just _inside_ the block.
+**Conditional blocks and loops** create a new scope, and this scope starts at the _condition_ –not just _inside_ the block.
 
 For instance, this does not yield an `Indentifier already exists` error:
 
@@ -182,3 +182,10 @@ BOOL flag = false
 IF (BOOL flag = true)
 END
 ```
+
+Here is a list of sentences that create a new scope:
+
+- `FROM…TO`
+- `IF…END`
+- `LOOP…END`
+- `REPEAT…UNTIL`
